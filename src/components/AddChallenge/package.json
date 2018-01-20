@@ -1,0 +1,6 @@
+{
+  "name": "AddChallenge",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./AddChallenge.js"
+}
