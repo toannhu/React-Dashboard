@@ -413,7 +413,7 @@ const mainChartOpts = {
 }
 
 
-class Dashboard extends Component {
+class Analytics extends Component {
   constructor(props) {
     super(props);
 
@@ -443,109 +443,6 @@ class Dashboard extends Component {
     return (
       <div className="animated fadeIn">
         <Row>
-          <Col xs="12" sm="6" lg="3">
-            <Card className="text-white bg-primary">
-              <CardBody className="pb-0">
-                <ButtonGroup className="float-right">
-                  <ButtonDropdown id='card1' isOpen={this.state.card1}
-                                  toggle={() => { this.setState({ card1: !this.state.card1 }); }}>
-                    <DropdownToggle caret className="p-0" color="transparent">
-                      <i className="icon-settings"></i>
-                    </DropdownToggle>
-                    <DropdownMenu right>
-                      <DropdownItem>Action</DropdownItem>
-                      <DropdownItem>Another action</DropdownItem>
-                      <DropdownItem disabled>Disabled action</DropdownItem>
-                      <DropdownItem>Something else here</DropdownItem>
-                    </DropdownMenu>
-                  </ButtonDropdown>
-                </ButtonGroup>
-                <h4 className="mb-0">9.823</h4>
-                <p>Members online</p>
-              </CardBody>
-              <div className="chart-wrapper px-3" style={{height:'70px'}}>
-                <Line data={cardChartData1} options={cardChartOpts1} height={70}/>
-              </div>
-            </Card>
-          </Col>
-
-          <Col xs="12" sm="6" lg="3">
-            <Card className="text-white bg-info">
-              <CardBody className="pb-0">
-                <ButtonGroup className="float-right">
-                  <Dropdown id='card2' isOpen={this.state.card2}
-                            toggle={() => { this.setState({ card2: !this.state.card2 }); }}>
-                    <DropdownToggle className="p-0" color="transparent">
-                      <i className="icon-location-pin"></i>
-                    </DropdownToggle>
-                    <DropdownMenu right>
-                      <DropdownItem>Action</DropdownItem>
-                      <DropdownItem>Another action</DropdownItem>
-                      <DropdownItem>Something else here</DropdownItem>
-                    </DropdownMenu>
-                  </Dropdown>
-                </ButtonGroup>
-                <h4 className="mb-0">9.823</h4>
-                <p>Members online</p>
-              </CardBody>
-              <div className="chart-wrapper px-3" style={{height:'70px'}}>
-                <Line data={cardChartData2} options={cardChartOpts2} height={70}/>
-              </div>
-            </Card>
-          </Col>
-
-          <Col xs="12" sm="6" lg="3">
-            <Card className="text-white bg-warning">
-              <CardBody className="pb-0">
-                <ButtonGroup className="float-right">
-                  <Dropdown id='card3' isOpen={this.state.card3}
-                            toggle={() => { this.setState({ card3: !this.state.card3 }); }}>
-                    <DropdownToggle caret className="p-0" color="transparent">
-                      <i className="icon-settings"></i>
-                    </DropdownToggle>
-                    <DropdownMenu right>
-                      <DropdownItem>Action</DropdownItem>
-                      <DropdownItem>Another action</DropdownItem>
-                      <DropdownItem>Something else here</DropdownItem>
-                    </DropdownMenu>
-                  </Dropdown>
-                </ButtonGroup>
-                <h4 className="mb-0">9.823</h4>
-                <p>Members online</p>
-              </CardBody>
-              <div className="chart-wrapper px-0" style={{height:'70px'}}>
-                <Line data={cardChartData3} options={cardChartOpts3} height={70}/>
-              </div>
-            </Card>
-          </Col>
-
-          <Col xs="12" sm="6" lg="3">
-            <Card className="text-white bg-danger">
-              <CardBody className="pb-0">
-                <ButtonGroup className="float-right">
-                  <ButtonDropdown id='card4' isOpen={this.state.card4}
-                                  toggle={() => { this.setState({ card4: !this.state.card4 }); }}>
-                    <DropdownToggle caret className="p-0" color="transparent">
-                      <i className="icon-settings"></i>
-                    </DropdownToggle>
-                    <DropdownMenu right>
-                      <DropdownItem>Action</DropdownItem>
-                      <DropdownItem>Another action</DropdownItem>
-                      <DropdownItem>Something else here</DropdownItem>
-                    </DropdownMenu>
-                  </ButtonDropdown>
-                </ButtonGroup>
-                <h4 className="mb-0">9.823</h4>
-                <p>Members online</p>
-              </CardBody>
-              <div className="chart-wrapper px-3" style={{height:'70px'}}>
-                <Bar data={cardChartData4} options={cardChartOpts4} height={70}/>
-              </div>
-            </Card>
-          </Col>
-        </Row>
-        <ListChallenges />
-        {/* <Row>
           <Col>
             <Card>
               <CardBody>
@@ -1224,10 +1121,10 @@ class Dashboard extends Component {
               </CardBody>
             </Card>
           </Col>
-        </Row> */}
+        </Row>
       </div>
     )
   }
 }
 
-export default Dashboard;
+export default Analytics;

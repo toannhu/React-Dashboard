@@ -51,6 +51,7 @@ class Login extends Component {
   }
 
   render() {
+    window.sessionStorage.removeItem('token');
     return (
       <div className="app flex-row align-items-center">
         <Container>

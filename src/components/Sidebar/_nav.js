@@ -10,6 +10,11 @@ export default {
       }
     },
     {
+      name: 'Analytics',
+      url: '/analytics',
+      icon: 'icon-pie-chart',
+    },
+    {
       name: 'Add New Challenge',
       url: '/challenge',
       icon: 'icon-puzzle',

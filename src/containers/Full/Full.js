@@ -50,6 +50,7 @@ import Alerts from '../../views/Notifications/Alerts/';
 import Badges from '../../views/Notifications/Badges/';
 import Modals from '../../views/Notifications/Modals/';
 
+import Analytics from '../../views/Analytics/';
 import AddChallenge from '../../components/AddChallenge/';
 
 class Full extends Component {
@@ -82,10 +83,24 @@ class Full extends Component {
 									render={() => (!this.isLoggedIn() ? <Redirect to="/login" /> : <Dashboard />)}
 								/>
 								}}/>
+                <Route
+									path="/analytics"
+									name="Analytics"
+									render={() => (!this.isLoggedIn() ? <Redirect to="/login" /> : <Analytics />)}
+								/>
+								}}/>
 								<Route
 									path="/challenge"
 									name="AddChallenge"
 									render={() => (!this.isLoggedIn() ? <Redirect to="/login" /> : <AddChallenge />)}
+								/>
+                <Route
+									path="/login"
+									name="Login"
+									render={() => {
+                    window.sessionStorage.removeItem('token');
+										return <Redirect to="/login" />;
+									}}
 								/>
 								<Route
 									path="/logout"

@@ -1,0 +1,6 @@
+{
+  "name": "ListChallenges",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./ListChallenges.js"
+}
